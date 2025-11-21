@@ -5,7 +5,7 @@ import { db } from '../../firebaseConfig';
 import { useCart } from '../../context/CartContext';
 import { toast } from 'react-toastify';
 import { motion } from "framer-motion";
-import orderImg from "/Users/arnavpandav/Desktop/cafe-project/public/order-now.png"; 
+
 
 
 export default function Order() {
@@ -35,7 +35,7 @@ export default function Order() {
   if (error) {
     return <div className="p-6 text-center text-red-500">Error fetching menu: {error.message}</div>;
   }
-  
+
 
   // Group items by category for better display
   const categorizedItems = items?.reduce((acc, item) => {
@@ -65,11 +65,15 @@ export default function Order() {
             transition={{ duration: 0.6 }}
             className="flex justify-center"
           >
+           
+
+
             <img
-              src={orderImg}
+              src="/order-now.png"
               alt="Order Now Illustration"
               className="rounded-2xl shadow-smooth max-w-md w-full object-cover"
             />
+
           </motion.div>
 
           {/* 📄 Right Side - Text + Button */}
