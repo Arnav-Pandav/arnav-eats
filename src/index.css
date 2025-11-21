@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *)); 
+
+/* 🍊 Primary Button (Main Action) */
+.btn-primary {
+  background-color: #F97316; /* theme orange */
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.25);
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #ea580c;
+  box-shadow: 0 0 18px rgba(249, 115, 22, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(249, 115, 22, 0.3);
+}
+
+/* 🟡 Secondary Button (Sub Action) */
+.btn-secondary {
+  background-color: #FBBF24;
+  color: #2E2E2E;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(251, 191, 36, 0.3);
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #f59e0b;
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(251, 191, 36, 0.25);
+}
+
+/* 🚫 Disabled State (shared for both buttons) */
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-disabled {
+  background-color: #d1d5db; /* Tailwind gray-300 */
+  color: #9ca3af; /* Tailwind gray-400 */
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.6;
+}
+
+/* 🌙 Dark Mode Button */
+.dark .btn-primary {
+  background-color: #14b8a6; /* teal-500 */
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.25);
+}
+
+/* 🌙 Dark Mode Hover Effect */
+.dark .btn-primary:hover {
+  background-color: #0d9488; /* teal-600 */
+  box-shadow: 0 0 18px rgba(20, 184, 166, 0.45);
+  transform: translateY(-2px); /* same hover lift as light mode */
+}
+
+/* 🌙 Dark Mode Active (click) */
+.dark .btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(20, 184, 166, 0.3);
+}
